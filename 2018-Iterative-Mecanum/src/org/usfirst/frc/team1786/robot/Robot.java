@@ -30,23 +30,6 @@ public class Robot extends IterativeRobot {
 	private SendableChooser<String> m_chooser = new SendableChooser<>();
 
 	
-	//Motor Controllers for drive system
-	WPI_TalonSRX  TalonSRX3 = new WPI_TalonSRX(3); // Right rear
-	WPI_TalonSRX  TalonSRX4 = new WPI_TalonSRX(4); // Left rear
-	WPI_TalonSRX  TalonSRX6 = new WPI_TalonSRX(6); // Left front
-	WPI_TalonSRX  TalonSRX7 = new WPI_TalonSRX(7); // Right Front
-			
-	TalonSRX  TalonSRX1 = new TalonSRX(1);
-	TalonSRX  TalonSRX2 = new TalonSRX(2);
-	TalonSRX  TalonSRX5 = new TalonSRX(5);
-			
-	//Joysticks
-	Joystick joystickLeft = new Joystick(0);
-	Joystick joystickRight = new Joystick(1);
-			
-	MecanumDrive myRobot = new MecanumDrive(TalonSRX6, TalonSRX4, TalonSRX7, TalonSRX3);
-	
-	
 	
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -100,10 +83,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		
-		myRobot.driveCartesian(joystickLeft.getX(), joystickLeft.getY(), joystickLeft.getZ(), 0);
-		//TalonSRX5.;
 		
-		//TalonSRX5.set(ControlMode.PercentOutput , joystickRight.getY());
 		
 	}
 
